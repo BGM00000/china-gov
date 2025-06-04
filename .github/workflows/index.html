@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ SKIBIDI SOCIAL CREDIT @_DOMIA_</title>
+    <link rel="icon" type="image/gif" href="favicon.png">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: white;
+        }
+        #gif {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 9999;
+        }
+        #logo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="co.png" alt="Logo communiste">
+    
+    <img id="gif" src="animation.gif" alt="GIF animé">
+    
+    <script>
+        let hasInteracted = false;
+        const audio = new Audio('228.mp3');
+        audio.volume = 1;
+        const gif = document.getElementById('gif');
+        const logo = document.getElementById('logo');
+
+        const titles = [
+            "@DOMIA 社會信用爆炸級", 
+            "下載中...黑暗模塊 ☠️", 
+            "密碼：🤫🔑1234 pswd", 
+            "非法登入來自：你媽的Wi-Fi", 
+            "你剛剛提升了 88 DOMIA", 
+            "🧧 WARNING: 虛擬餃子啟動", 
+            "ERROR: 太多滑稽", 
+            "🀄️ DOMIA No.1 in Beijing", 
+            "你的信用點數像泡麵一樣", 
+            "HACKED BY 三杯雞", 
+            "你已成為尊貴用戶 😎", 
+            "🧪 Injecting 滑稽病毒", 
+            "SKIBIDI 🇨🇳 MEGA MAX EDITION", 
+            "⛩️ 入侵 via 老北京", 
+            "💸 Skibidi Credit Farm 開啟", 
+        ];
+
+        let i = 0;
+        setInterval(() => {
+            document.title = titles[i % titles.length];
+            i++;
+        }, 350);
+
+        function startVibrations() {
+            if (navigator.vibrate) {
+                setInterval(() => {
+                    navigator.vibrate([100, 50, 100, 50]);
+                }, 500);
+            }
+        }
+
+        document.addEventListener('click', () => {
+            if (!hasInteracted) {
+                hasInteracted = true;
+				audio.play();
+				startVibrations();
+                logo.style.display = 'none';
+                gif.style.display = 'block';
+                setTimeout(() => {
+                    window.open('https://zk.rf.gd/', '_blank');
+                }, 90);
+                setInterval(() => {
+                    document.body.style.transform = `translate(${Math.random() * 30 - 15}px, ${Math.random() * 30 - 15}px)`;
+                }, 100);
+                setInterval(() => {
+                    if (Math.random() < 0.1) {
+                        alert("開啟 | HACKED BY @_DOMIA_ | 開啟");
+                    }
+                }, 13000);
+            }
+        });
+    </script>
+</body>
+</html>
